@@ -4,3 +4,6 @@
 
 # Maven
 target/
+
+# Execution files
+/log.txt

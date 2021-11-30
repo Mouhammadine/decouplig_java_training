@@ -1,8 +1,13 @@
 package fr.lernejo.guessname;
 
+import fr.lernejo.logger.Logger;
+import fr.lernejo.logger.LoggerFactory;
+
 public class ComputerPlayer  implements Player {
     private long a = 0;
     private long b = 99;
+
+    private final Logger logger = LoggerFactory.getLogger("computer");
 
     @Override
     public long askNextGuess() {
@@ -18,5 +23,7 @@ public class ComputerPlayer  implements Player {
         } else {
             this.b = mid;
         }
+
+        logger.log("search in [" + this.a + "; " + this.b + "]");
     }
 }

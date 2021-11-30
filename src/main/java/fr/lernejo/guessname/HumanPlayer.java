@@ -11,7 +11,6 @@ public class HumanPlayer implements Player {
 
     @Override
     public long askNextGuess() {
-        logger.log("enter guess:");
         return this.scanner.nextInt();
     }
 
